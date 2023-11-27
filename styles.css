@@ -1,0 +1,757 @@
+/* Seth Choate */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* End of CSS Reset */
+/* Root */
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --darkgray: #222222;
+    --lightgray: #EAEAEA;
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+}
+/*Skip to content and main main nav for sr only*/
+#skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skip a:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+/* Setting Font for Majorca page */
+html {
+    font-size: 16px;
+}
+
+h4, p, q, small, nav, button, form, label,footer {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3{
+    font-family: 'Molle', cursive;
+    
+}
+h1 {
+    font-size: 50px;
+}
+h2 {
+    font-size: 40px;
+    margin-top: 15px;
+}
+h3 {
+    font-size: 30px;
+    margin-top: 15px;
+}
+h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+header p, #intro p {
+    line-height: 1.5;
+}
+.required {
+    color: var(--purple);
+}
+input::placeholder, select{
+    font-size: x-large;
+}
+#menu {
+    font-size: large;
+    font-variant: all-small-caps;
+    font-weight: bolder;
+}
+/*End of Fonts*/
+
+/* header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+    background: linear-gradient(var(--teal), var(--white)); 
+}
+
+header img {
+    width: 175px;
+    height:80px;
+}
+header img, h1,p {
+    margin: 10px 45px;
+}
+
+/* Menu */
+#menu-toggle h2{
+    display: none;
+}
+/* End of Menu */
+/* end of header styles */
+#intro h2 {
+    padding: 5px 25px;
+    line-height: 1.5;
+}
+
+#img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;  
+}
+#intro img {
+    width: 100%;
+    height: 300px;
+}
+
+#main-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 120px;
+}
+
+#plan {
+    padding: 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+    background:  var(--yellow);
+}
+#plan section {
+    margin: 10px auto;
+    background: var(--teal);
+    border: .2rem solid var(--white);
+    border-radius: 10px;
+    text-align: center;
+}
+#plan img {
+   margin: 25px;
+}
+#plan div {
+    margin: 10px;
+    width: 90%;
+}
+#plan h4{
+    font-size: 40px;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    margin: 10px;
+}
+#testimonials {
+    padding: 0 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+#testimonials section {
+    text-align: center;
+    margin: 10px 0;
+}
+#testimonials h4 {
+    font-size: 40px;
+    font-stretch: 750%;
+    font-variant: all-small-caps; 
+}
+#testimonials p, q {
+   font-size: large;
+   font-weight: 500;
+}
+#testimonials q {
+    font-style: italic;
+    quotes: "“" "”";
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
+#about{
+    font-size: 16px;
+    padding: 10px 25px;
+    width: 100%;
+    background: var(--blue);
+    align-items: center;
+}
+
+#about h3 {
+    margin: 25px;
+    font-size: 40px;
+}
+#about div {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#about section{
+    text-align: center;
+}
+
+#about img {
+    width: 90px;
+    height: 90px;
+}
+
+#about h4 {
+    margin: 5px;
+    font-size:  24px;
+    font-variant: all-small-caps;
+}
+
+#contact{
+    margin-top: 15px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+#contact h3 {
+    margin: 5px 25px;
+    font-size: 40px;
+}
+.form-required{
+    font-size: 20px;
+    font-style: italic;
+}
+form{
+    font-size: 2rem;
+    font-variant: all-small-caps;
+    font-weight: bold;
+     margin: 0px 25px; 
+    padding: 0px 15px 
+}
+input {
+    border: 3.5px solid var(--purple);
+    height: 65px;
+    margin-top: 5px;
+    padding: 0.25em 0.5em;
+}
+select {
+    width: 100%;
+    border: 3.5px solid var(--purple);
+    height: 65px;    
+}
+
+#names {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#nums {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#radio-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    width: 100%;
+}
+.radio-input {
+    display: inline-flex;
+}
+legend {
+    margin: 20px 0;
+}
+.radio-label {
+    font-variant: normal;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 15px;
+}
+input[type="radio"]{
+    appearance: none;
+    margin: 0;
+    font:inherit;
+    color:var(--purple);
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transform: translateY(-0.3em);
+}
+input[type="radio"]::before {
+   content: "";
+   width: 0.65em;
+   height: 0.65em;
+   border-radius: 50%;
+   transform: scale(0);
+   transition: 120ms transform ease-in-out;
+   box-shadow: inset 1em 1em var(--purple);
+}
+input[type="radio"]:checked::before {
+    transform: scale(3);
+}
+#selects {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#mySubmit{
+    font-size: x-large;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    margin: 15px 0;
+    color: var(--white);
+    background:  var(--purple);
+}
+
+footer{
+    font-size: large;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+    background: var(--lightgray);
+    text-align: center;
+    padding: 25px;
+    width: 100%;
+}
+footer a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+
+@media screen and (max-width: 749px) {
+    nav {
+        grid-column: 2 / -1;
+        grid-row: 1;
+    }
+
+    header h1, p {
+        grid-column: -3 / -1;
+    }
+    #menu-toggle {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 50px;
+        top: 10px;
+        z-index: 1;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+
+    }
+
+    #menu-toggle a {
+        text-decoration: none;
+        color: var(--black);
+        -webkit-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+    }
+
+    #menu-toggle a:hover {
+        color: var(--yellow);
+    }
+
+    #menu-toggle input {
+        display: block;
+        width: 300px;
+        height: 30px;
+        top: 25px;
+        position: absolute;
+        padding: 0;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+    }
+
+    #menu-toggle label {
+        position: absolute;
+        display: block;
+        padding-top: 10px;
+        ;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        height: 50px;
+        font-weight: bold;
+        text-align: center;
+        background: var(--yellow);
+    }
+
+    #menu {
+        position: relative;
+        top: 4em;
+        background: var(--teal);
+        list-style-type: none;
+        right: -10000%;
+        -webkit-transition: right 0.3s ease;
+        -o-transition: right 0.3s ease;
+        transition: right 0.3s ease;
+    }
+
+    #menu li {
+        padding-top: 15px;
+        padding-bottom: 5px;
+        border-top: 0.15rem solid;
+        text-align: center;
+        font-weight: 800;
+    }
+
+    #menu-toggle input:checked~ul {
+        left: 0;
+
+    }
+
+    #menu-toggle input:checked~label {
+        background: var(--black);
+        color: var(--white);
+    }
+}
+
+/* breakpoints for larger screens */
+@media screen and (min-width: 750px) {
+
+/*menu*/
+header {
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+header h1 {
+    margin-top: 25px;
+}
+header p{
+    grid-column-start: 2;
+} 
+nav {
+    grid-row: 3;
+    grid-column: 1 / -1;
+    max-width: 100%;
+}
+#menu-toggle label{
+   display: none;
+}
+#menu-toggle input {
+    display: none;
+}
+#menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+    background: none;
+    list-style: none;
+    text-align: center;
+    margin: 0 45px;
+}
+#menu li {
+    display: block;
+    background: var(--white);
+    padding: 1em;
+}
+#menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--black);
+}
+#menu-toggle li:hover {
+    background: var(--yellow);
+}
+/*end of menu*/
+/* img-grid*/
+#img-grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+picture {
+    grid-column: 1/-1;
+    grid-row: 2;
+}
+
+/*end of image grid*/
+/*plan img*/
+#plan div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em; 
+}
+#plan section {
+    width : 100%
+}
+/*end of plan img*/
+/*testimonials*/
+#testimonials div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+#testimonials section {
+    width: 100%
+}
+/*end of testimonials*/
+/*about*/
+#about div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 1em;
+}
+/*end of about*/
+form {
+    margin: auto;
+    width: 75%;
+}
+/*radio inputs*/
+#radio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: x-large;
+    gap: .5em;
+    width: 100%;
+}
+/*end of radio inputs*/
+/*form submit*/
+
+#mySubmit {
+    width: 50%;
+    margin-top: 50px;
+}
+/*end of form submit*/
+footer {
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: auto;
+    gap: .15em;
+   
+}
+}
+@media screen and (min-width: 1250px) {
+/*menu*/
+header {
+        grid-template-columns: .5fr 1fr 2fr;
+        grid-template-rows: auto;
+}
+p {
+    font-size: x-large;
+}
+#menu, nav{
+    position: absolute;
+    top: 0;
+    right:-25px;
+    gap: .5em;
+}
+#menu li {
+    font-weight: 1000;
+    width: 6em;
+    height: 5px;
+    text-align: center;
+}
+#main-content article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+#intro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+}
+#intro p{
+    grid-column: 1 / 2;
+}
+#plan div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+}
+#testimonials div {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+#img-grid {
+transform: translateY(-10%);
+}
+#about div{
+    margin: auto;
+}
+form {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:1.5em;
+}
+#radio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5em;
+    width: 110%;
+}
+.radio-label{
+    font-size: large;
+}
+
+input[type="radio"] {
+    width: 2em;
+    height: 2em;
+}
+input[type="radio"]::before {
+    width: 0.45em;
+    height: 0.45em;
+}
+/*end of radio inputs*/
+/*form submit*/
+
+footer{
+    grid-template-columns: 4fr 1fr 1fr;
+    padding-top: 25px;
+}
+footer p {
+    text-align: left;
+}
+/*end of menu*/
+
+}
+
+    
